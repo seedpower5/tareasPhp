@@ -1,0 +1,22 @@
+-- Elimina la base de datos si ya existe
+DROP DATABASE IF EXISTS GestionTareas;
+
+-- Crea la base de datos Usuario
+CREATE DATABASE GestionTareas;
+
+-- Selecciona la base de datos recién creada
+USE GestionTareas;
+
+-- Crea la tabla Tareas
+CREATE TABLE Tareas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50),
+    descripcion VARCHAR(50),
+    fechaCreacion DATE, 
+    completado TINYINT(1)
+);
+
+-- Inserta un registro en la tabla Tareas
+INSERT INTO Tareas (nombre, descripcion, fechaCreacion, completado)
+VALUES ('lavar platos', 'tengo que lavar los platos', '2024-01-30', 0);
+
